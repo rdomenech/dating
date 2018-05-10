@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "14909923-ac60-4ad7-b463-dc743dbbc19c",
+		"name": "Dating",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/members",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"haha10@hih.com\",\n    \"first_name\": \"haha\",\n    \"last_name\": \"hihi\",\n    \"password\": \"1234566\",\n    \"gender\": 0,\n    \"age\": 18,\n    \"interests\": [{\n        \"id\": 1,\n        \"name\": \"remain\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/members/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"members",
+						""
+					]
+				},
+				"description": "Create a member."
+			},
+			"response": []
+		},
+		{
+			"name": "/members",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"haha10@hih.com\",\n    \"first_name\": \"haha\",\n    \"last_name\": \"hihi\",\n    \"password\": \"1234566\",\n    \"gender\": 0,\n    \"age\": 18,\n    \"interests\": [{\n        \"id\": 1,\n        \"name\": \"remain\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/members/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"members",
+						""
+					]
+				},
+				"description": "List of members."
+			},
+			"response": []
+		},
+		{
+			"name": "/members/<member_id>",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"haha10@hih.com\",\n    \"first_name\": \"haha\",\n    \"last_name\": \"hihi\",\n    \"password\": \"1234566\",\n    \"gender\": 0,\n    \"age\": 18,\n    \"interests\": [{\n        \"id\": 1,\n        \"name\": \"remain\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/members/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"members",
+						"1",
+						""
+					]
+				},
+				"description": "Member detail."
+			},
+			"response": []
+		},
+		{
+			"name": "/interests",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"interest\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/interests/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"interests",
+						""
+					]
+				},
+				"description": "Create an interest."
+			},
+			"response": []
+		},
+		{
+			"name": "/interests",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"haha10@hih.com\",\n    \"first_name\": \"haha\",\n    \"last_name\": \"hihi\",\n    \"password\": \"1234566\",\n    \"gender\": 0,\n    \"age\": 18,\n    \"interests\": [{\n        \"id\": 1,\n        \"name\": \"remain\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/interests/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"interests",
+						""
+					]
+				},
+				"description": "List of interests."
+			},
+			"response": []
+		},
+		{
+			"name": "/interests/<interest_id>",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"haha10@hih.com\",\n    \"first_name\": \"haha\",\n    \"last_name\": \"hihi\",\n    \"password\": \"1234566\",\n    \"gender\": 0,\n    \"age\": 18,\n    \"interests\": [{\n        \"id\": 1,\n        \"name\": \"remain\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/interests/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"interests",
+						"1",
+						""
+					]
+				},
+				"description": "Interest detail."
+			},
+			"response": []
+		}
+	]
+}
