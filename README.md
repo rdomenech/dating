@@ -5,6 +5,7 @@ Technical test as Python developer in retoglobal
 - Open a terminal.
 - Download the source code.
 - Create a virtualenv or virtualenwrapper with python 3.x.
+- Redis and mysql should be intalled and running.
 - Install the requirements.
 - Open mysql: 
 ```bash
