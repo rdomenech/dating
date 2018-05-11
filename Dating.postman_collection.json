@@ -222,6 +222,43 @@
 				"description": "Interest detail."
 			},
 			"response": []
+		},
+		{
+			"name": "/affinity/<member_id>",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"haha10@hih.com\",\n    \"first_name\": \"haha\",\n    \"last_name\": \"hihi\",\n    \"password\": \"1234566\",\n    \"gender\": 0,\n    \"age\": 18,\n    \"interests\": [{\n        \"id\": 1,\n        \"name\": \"remain\"\n    }]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/affinity/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"affinity",
+						"1",
+						""
+					]
+				},
+				"description": "Affinity to a member."
+			},
+			"response": []
 		}
 	]
 }
