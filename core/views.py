@@ -51,8 +51,6 @@ class MemberDetail(APIView):
     Retrieve a member instance.
     """
 
-    #renderer_classes = (JSONRenderer,)
-
     def get_object(self, pk):
         """
         It retrieves the member object related with the specified pk or a 404
@@ -111,8 +109,6 @@ class InterestDetail(APIView):
     """
     Retrieve an interest instance.
     """
-
-    #renderer_classes = (JSONRenderer,)
 
     def get_object(self, pk):
         """

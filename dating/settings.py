@@ -126,10 +126,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# DJANGO REST FRAMEWORK CONFIG
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+}
+
+# REDIS CONFIG
+REDIS_CONFIG = {
+    'host': '127.0.0.1',
+    'port': '6379',
+    'password': ''
 }
