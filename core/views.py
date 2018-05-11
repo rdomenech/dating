@@ -1,11 +1,14 @@
-from core.models import Interest, Member
-from core.serializers import InterestSerializer, MemberSerializer
+import json
+
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.renderers import JSONRenderer
 from rest_framework import generics
 from rest_framework import status
+
+from core.models import Interest, Member
+from core.serializers import InterestSerializer, MemberSerializer
+from core.utils import redis_cli
 
 
 class MemberList(generics.ListAPIView):
@@ -132,3 +135,19 @@ class InterestDetail(APIView):
         interest = self.get_object(pk)
         serializer = InterestSerializer(interest)
         return Response(serializer.data)
+
+
+class Affinity(APIView):
+    """
+    Retrieve the affinity results
+    """
+
+    def get(self, request, pk):
+        """
+        It retrieve the affinity objects specified in the pk.
+        :param request: http request
+        :param pk: object primary key
+        :return: http response
+        """
+        redis_client = redis_cli()
+        return Response(json.loads(redis_client.get(pk)))

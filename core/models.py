@@ -27,7 +27,8 @@ class Member(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     gender = models.PositiveSmallIntegerField(
-        choices=GENDER_CHOICES, default=MALE, validators=[MinValueValidator(0)])
+        choices=GENDER_CHOICES, default=MALE,
+        validators=[MinValueValidator(0)])
     age = models.PositiveSmallIntegerField(validators=[MinValueValidator(0)])
     interests = models.ManyToManyField(Interest)
 
@@ -61,8 +62,8 @@ class Member(models.Model):
             other_member_interests = [interest['name'] for interest in
                                       member_data['interests']]
 
-            member_data['scoring'] += len(set(member_interests) &
-                                         set(other_member_interests)) * 100
+            member_data['scoring'] += len(set(member_interests) & set(
+                other_member_interests)) * 100
 
             scoring_list.append(member_data)
 

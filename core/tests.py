@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -31,7 +30,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -54,7 +53,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'wrong'},]
+            'interests': [{'id': 1, 'name': 'wrong'}]
         }
 
         response = self.client.post(url, data)
@@ -98,7 +97,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': None,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -118,7 +117,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': -10,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -138,7 +137,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': None,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -158,7 +157,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': -1,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -178,7 +177,7 @@ class MemberTests(APITestCase):
             'password': None,
             'gender': 0,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -198,7 +197,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -218,7 +217,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)
@@ -237,7 +236,7 @@ class MemberTests(APITestCase):
             'password': 'test12345',
             'gender': 0,
             'age': 18,
-            'interests': [{'id': 1, 'name': 'test_interest'},]
+            'interests': [{'id': 1, 'name': 'test_interest'}]
         }
 
         response = self.client.post(url, data)

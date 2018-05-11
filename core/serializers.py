@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 from core.models import Interest, Member
 
+
 class InterestSerializer(serializers.ModelSerializer):
     """
     Interest class serializer.

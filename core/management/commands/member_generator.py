@@ -7,6 +7,7 @@ from faker import Factory
 
 from core.models import Interest, Member
 
+
 class Command(BaseCommand):
     help = 'Generates fake users for testing purposes.'
 
@@ -44,4 +45,3 @@ class Command(BaseCommand):
                 member.interests.add(interest)
 
         self.stdout.write('Process finished...')
-

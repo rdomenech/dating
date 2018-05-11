@@ -5,6 +5,7 @@ from django.core.management.base import BaseCommand
 from core.models import Member
 from core.utils import redis_cli
 
+
 class Command(BaseCommand):
     help = 'It generates the initial scoring data'
 

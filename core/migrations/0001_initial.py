@@ -17,18 +17,23 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Interest',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, primary_key=True,
+                                        serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
             ],
         ),
         migrations.CreateModel(
             name='Member',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('gender', models.PositiveSmallIntegerField(choices=[(0, 'Male'), (1, 'Female')], default=0)),
+                ('id', models.AutoField(auto_created=True, primary_key=True,
+                                        serialize=False, verbose_name='ID')),
+                ('gender', models.PositiveSmallIntegerField(
+                    choices=[(0, 'Male'), (1, 'Female')], default=0)),
                 ('age', models.PositiveSmallIntegerField()),
                 ('interests', models.ManyToManyField(to='core.Interest')),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
